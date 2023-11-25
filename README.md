@@ -1,7 +1,3 @@
-# Welcome to streamlit
+# Welcome to MercadoLibre Advance Search for me :), but anyone else can use.
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
-
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
-
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+I built this app to create an advance MercadoLibre search to optimize my purchases. Feel free to fork if this code is useful for you. 
