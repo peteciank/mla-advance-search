@@ -3,7 +3,7 @@ import streamlit as st
 
 # Function to fetch product data from MercadoLibre API
 def get_products(query):
-    url = f"https://api.mercadolibre.com/sites/MLA/search?q={query}"
+    url = "https://api.mercadolibre.com/sites/MLA/search?q={query}"
     response = requests.get(url)
     data = response.json()
     return data.get("results", [])
