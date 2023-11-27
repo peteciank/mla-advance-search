@@ -1,5 +1,6 @@
 import requests
 import streamlit as st
+import pandas as pd
 
 # Function to fetch product data from MercadoLibre API
 def get_products(query):
@@ -22,10 +23,10 @@ def main():
     # Search field for filtering the displayed table
     table_search_term = st.text_input("Filter results by name:", "")
 
-    # Display table with search functionality
-    table_width = st.slider("Adjust Table Width", min_value=200, max_value=1200, value=800)
+    # Display table with search functionality using st.dataframe()
     filtered_products = [product for product in products if table_search_term.lower() in product.get("title", "").lower()]
-    st.table(filtered_products).set_frame_width(table_width)
+    df = pd.DataFrame(filtered_products)
+    st.dataframe(df)
 
 if __name__ == "__main__":
     main()
