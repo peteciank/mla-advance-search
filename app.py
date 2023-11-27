@@ -23,8 +23,9 @@ def main():
     table_search_term = st.text_input("Filter results by name:", "")
 
     # Display table with search functionality
+    table_width = st.slider("Adjust Table Width", min_value=200, max_value=1200, value=800)
     filtered_products = [product for product in products if table_search_term.lower() in product.get("title", "").lower()]
-    st.table(filtered_products)
+    st.table(filtered_products).set_frame_width(table_width)
 
 if __name__ == "__main__":
     main()
